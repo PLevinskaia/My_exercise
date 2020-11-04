@@ -1,1 +1,13 @@
-123
+12
+G : F
+A
+B : A
+C : A
+D : B C
+E : D
+F : D
+X
+Y : X A
+Z : X
+V : Z Y
+W : V
