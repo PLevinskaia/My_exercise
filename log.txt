@@ -1,10 +1,34 @@
-9
-add global a
-create foo global
-add foo b
-get foo a
-get foo c
-create bar foo
-add bar a
-get bar a
-get global a
+dic={}
+n=int(input())
+for i in range(n):
+    child, *parent = input().replace(':', ' ').split(' ')
+    if not parent:
+        pass
+    for par in parent:
+        if par not in dic.keys():
+            dic[par]=[]
+        dic[par].append(child)
+
+        for p in parent[:(parent.index(par))]:
+            if p not in dic.keys():
+                dic[par] = []
+            dic[par].append(p)
+            if p in dic.keys():
+                
+
+
+
+
+print(dic)
+och=[]
+m=int(input())
+for i in range(m):
+    ex = str(input())
+    if ex in och:
+        print(ex)
+    if ex in dic.keys():
+        for j in dic[ex]:
+            och.append(j)
+        print(och)
+
+
